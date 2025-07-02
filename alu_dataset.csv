@@ -1,0 +1,145 @@
+bit_width,operations,verilog_code
+2,"ADD, SUB, AND, OR","module ALU_2bit (
+    input  [1:0] A,
+    input  [1:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [1:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+3,"ADD, SUB, AND, OR","module ALU_3bit (
+    input  [2:0] A,
+    input  [2:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [2:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+4,"ADD, SUB, AND, OR","module ALU_4bit (
+    input  [3:0] A,
+    input  [3:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [3:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+5,"ADD, SUB, AND, OR","module ALU_5bit (
+    input  [4:0] A,
+    input  [4:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [4:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+6,"ADD, SUB, AND, OR","module ALU_6bit (
+    input  [5:0] A,
+    input  [5:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [5:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+8,"ADD, SUB, AND, OR","module ALU_8bit (
+    input  [7:0] A,
+    input  [7:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [7:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+16,"ADD, SUB, AND, OR","module ALU_16bit (
+    input  [15:0] A,
+    input  [15:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [15:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
+32,"ADD, SUB, AND, OR","module ALU_32bit (
+    input  [31:0] A,
+    input  [31:0] B,
+    input  [1:0] ALU_Sel,
+    output reg [31:0] ALU_Out
+);
+
+always @(*) begin
+    case (ALU_Sel)
+        2'b00: ALU_Out = A + B;         // ADD
+        2'b01: ALU_Out = A - B;         // SUB
+        2'b10: ALU_Out = A & B;         // AND
+        2'b11: ALU_Out = A | B;         // OR
+        default: ALU_Out = 0;
+    endcase
+end
+
+endmodule"
