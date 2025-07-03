@@ -1,0 +1,112 @@
+Question     Verilog Code
+             module mux2to1 (
+                input wire a, b,
+                input wire sel,
+                output wire y
+             );
+Design a 2:1 assign y = sel ? b :
+Multiplexer a;
+in Verilog   endmodule
+             module mux4to1 (
+                input wire [3:0] in,
+                input wire [1:0]
+             sel,
+                output reg out
+             );
+                always @(*) begin
+                    case(sel)
+                        2'b00: out =
+             in[0];
+                        2'b01: out =
+             in[1];
+                        2'b10: out =
+             in[2];
+                        2'b11: out =
+Design a 4:1 in[3];
+Multiplexer         endcase
+using `case` end
+in Verilog   endmodule
+             module d_flip_flop (
+                input wire clk,
+                input wire d,
+                output reg q
+             );
+                always
+Design a D @(posedge clk)
+Flip-Flop    begin
+(positive           q <= d;
+edge-           end
+triggered)   endmodule
+             module counter3bit (
+                input wire clk,
+                input wire rst,
+                output reg [2:0]
+             count
+             );
+                always
+             @(posedge clk or
+             posedge rst) begin
+                    if (rst)
+                        count <=
+             3'b000;
+                    else
+Design a 3-             count <=
+bit          count + 1;
+Synchronous end
+Counter      endmodule
+             module register8 (
+                input wire clk,
+                input wire en,
+                input wire [7:0] d,
+                output reg [7:0] q
+             );
+                always
+             @(posedge clk)
+             begin
+                    if (en)
+Design an 8-            q <= d;
+bit Register    end
+with Enable endmodule
+              module full_adder (
+                 input wire a, b,
+              cin,
+                 output wire sum,
+              cout
+              );
+                 assign sum = a ^ b
+              ^ cin;
+                 assign cout = (a &
+              b) | (b & cin) | (a &
+Design a 1- cin);
+bit Full      endmodule
+Adder
+              module
+              priority_encoder8 (
+                 input wire [7:0] in,
+                 output reg [2:0]
+              out
+              );
+                 always @(*) begin
+                    casex (in)
+                       8'b1xxxxxxx:
+              out = 3'b111;
+                       8'b01xxxxxx:
+              out = 3'b110;
+                       8'b001xxxxx:
+              out = 3'b101;
+                       8'b0001xxxx:
+              out = 3'b100;
+                       8'b00001xxx:
+              out = 3'b011;
+                       8'b000001xx:
+              out = 3'b010;
+                       8'b0000001x:
+              out = 3'b001;
+                       8'b00000001:
+              out = 3'b000;
+                       default: out =
+              3'b000;
+Design an 8-        endcase
+to-3 Priority    end
+Encoder       endmodule
+
